@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    {% block body %}{% endblock %}
+    <h3>In this page you can type symbol of which stocks and see her price</h3>
+    <form action="/quote" method="post" id="search">
+        <input type="text" name="stocks" autocomplete="off" autofocus placeholder="Type name of stocks">
+        <input type="submit" name="Search">
+    </form>
+
+{% endblock %}

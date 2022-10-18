@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <h4>On this page you can buy stocks</h4>
+    <form action="/buy" method="post">
+        <input type="text" name="symbol" autocomplete="off" autofocus placeholder="Symbol of stock">
+        <input type="text" name="shares" autocomplete="off" placeholder="Type number of stocks">
+        <input type="submit" name="Search">
+    </form>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<table>
+    <tr>
+        <th>Symbol</th>
+        <th>Company name</th>
+        <th>Volume</th>
+        <th>Price</th>
+    </tr>
+    <tr>
+        <td>{{ respone["symbol"]}}</td>
+        <td>{{ respone["name"] }}</td>
+        <td>{{ respone["volume"] }}</td>
+        <td>{{ respone["volume"] * respone["price"] }}</td>
+    </tr>
+</table>    
+
+{% endblock %}

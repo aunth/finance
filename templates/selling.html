@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <h4>On this page you can sell stocks</h4>
+    <form action="/sell" method="post">
+        <input type="text" name="symbol" placeholder="Symbol" autocomplete="off">
+        <input type="text" name="volume" placeholder="Shares" autocomplete="off">
+        <input type="submit" name="sell">
+    </form>
+
+{% endblock %}

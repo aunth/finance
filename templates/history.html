@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <table>
+        <tr>
+            <th>Company name</th>
+            <th>Volume</th>
+            <th>Price</th>
+            <th>Current balance</th>
+            <th>Time of transaction</th>
+            <th>Type of transaction</th>
+        </tr>
+        {% for transactions in transaction %}
+            <tr>
+                <td>{{ transactions[1] }}</td>
+                <td>{{ transactions[2] }}</td>
+                <td>{{ transactions[3] | usd}}</td>
+                <td>{{ transactions[4] | usd}}</td>
+                <td>{{ transactions[5] }}</td>
+                <td>{{ transactions[6] }} </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}
