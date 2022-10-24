@@ -4,7 +4,6 @@ import os
 import json
 from time import asctime
 import hashlib
-
 import sqlite3
 from urllib import response
 from flask import Flask, redirect, render_template, request, session
@@ -27,10 +26,8 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
-# Configure CS50 Library to use SQLite database
 db = sqlite3.connect('./finance.db', check_same_thread=False)
 cursor = db.cursor()
-#db = SQL("sqlite:///finance.db")
 
 # Make sure API key is set
 if not os.environ.get("API_KEY"):
@@ -47,7 +44,7 @@ def after_request(response):
 @app.route("/")
 @login_required
 def index():
-    return render_template('about.html', message="TODO")
+    return render_template('about.html')
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
